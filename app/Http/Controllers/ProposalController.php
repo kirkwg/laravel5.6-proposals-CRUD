@@ -44,7 +44,7 @@ class ProposalController extends Controller
             'middlename' => 'nullable|max:20',
 			'lastname' => 'bail|required|max:30',
             'papertitle' => 'required|max:255',
-            'emailaddress' => 'email|required|max:30',
+            'email' => 'email|required|max:30',
 			'phonenumber' => 'required|min:8|numeric',
             'position' => 'nullable',
             'institution' => 'required',

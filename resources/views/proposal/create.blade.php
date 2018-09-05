@@ -25,7 +25,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{ route('proposals.store') }}" method="POST">
+    <form action="{{ route('proposal.store') }}" method="POST">
         
         @csrf
 
@@ -74,7 +74,7 @@
         <div class="row">	
              	
 				<div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="form-group {{ $errors->has('emailaddress') ? 'has-error' : '' }}">  
+                <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">  
 					<strong>Email Address:</strong>
 					<input type="text" name="email" class="form-control" value="{{ old('email') }}">
                     <span class="text-danger">{{ $errors->first('email') }}</span>
@@ -132,7 +132,7 @@
                 <div class="form-group {{ $errors->has('postaladdress') ? 'has-error' : '' }}">    
                     <strong>Postal Address:</strong>
                     <textarea class="form-control" rows="2" name="postaladdress" 
-                       value="{{ old('postaladdress') }}" placeholder="enter postal address.."></textarea>
+                       placeholder="enter address..">{{ ucwords(old('postaladdress')) }}</textarea>
                     <span class="text-danger">{{ $errors->first('postaladdress') }}</span>				
 				</div>	
              </div>				
@@ -145,7 +145,7 @@
                 <div class="form-group {{ $errors->has('papertitle') ? 'has-error' : '' }}">  	  
 						<strong>Paper Title:</strong>
 						<textarea class="form-control" rows="2" name="papertitle" 
-                           value="{{ ucwords(old('papertitle')) }}" placeholder="required, enter paper title.."></textarea>
+                          placeholder="enter paper title..">{{ ucwords(old('papertitle')) }}</textarea>
                     <span class="text-danger">{{ $errors->first('papertitle') }}</span>
 				  </div>
 			  </div>
@@ -178,7 +178,7 @@
 				</div>
               </div>	           
 			  <div class="col-xs-12 col-sm-12 col-md-12" >   
-                <div class="form-group {{ $errors->has('summary') ? 'has-error' : '' }}">  			  
+                <div class="form-group {{ $errors->has('biostatement') ? 'has-error' : '' }}">  			  
 						<strong>Author's Biostatement:</strong>
 						<textarea name="biostatement" class="form-control" rows="3" 
                             placeholder="required, write your own biostatement..">{{ old('biostatement') }}</textarea>						
