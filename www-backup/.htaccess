@@ -1,0 +1,9 @@
+order deny,allow
+
+# Denies all IP's
+Deny from all
+
+# This will allow the IP 172.15.23.9
+allow from 192.168.33.10
+allow from 192.168.33.1
+allow from 127.0.0.1

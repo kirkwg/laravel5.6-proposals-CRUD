@@ -1,0 +1,15 @@
+body {
+ font-size: 15px;
+ font-family: 'PT Sans Narrow', sans-serif!important;
+ background-color: #eee;
+
+}
+
+
+tr {
+    border: 3px solid white;
+    background-color: #d8d8d8  /* light dark gray */
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2  /* light gray */
+}
