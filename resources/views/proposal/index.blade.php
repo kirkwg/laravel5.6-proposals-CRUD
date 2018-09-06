@@ -1,6 +1,5 @@
 @extends('proposal.layout')
 
-
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -21,18 +20,22 @@
         </div>
     @endif
 	
-    <table class="table table-bordered">
+    <table class="table  ">
         <tr>
             <th>No.</th>
             <th>Name</th>
             <th>Proposal Title</th>
+			<th>Institution</th>
+			<th>Created at</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($proposals as $proposal)
         <tr>
             <td>{{ ++$i }}</td>
             <td style=”table-layout:fixed”>{{ $proposal->lastname }}, {{ $proposal->firstname }}</td>
-            <td>{{ $proposal->papertitle }}</td>
+            <td>{{ $proposal->papertitle }}</td>      <!-- Config::get('constants.institutions.6')-->
+			<td> {{ Config::get('constants.institutions.' . $proposal->institution) }}  </td>
+			<td>{{ $proposal->created_at }}</td>
             <td>
                 <form action="{{ route('proposal.destroy',$proposal->id) }}" method="POST">
 
