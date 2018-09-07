@@ -17,10 +17,10 @@
 
 	  <h6>Proposal Record ID: {{ $proposal->id }}</h6>
 	  <table class="table table-bordered">
-		<thead><tr>
+		<!--thead><tr>
 					<th>Field</th>
 					<th>Content</th>
-		</tr></thead>
+		</tr></thead-->
 
 		<tbody>
 			 <tr>

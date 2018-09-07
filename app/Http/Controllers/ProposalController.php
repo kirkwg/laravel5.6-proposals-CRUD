@@ -48,7 +48,7 @@ class ProposalController extends Controller
 			'phonenumber' => 'required|min:8|numeric',
             'position' => 'nullable',
             'institution' => 'required',
-            'postaladdress' => 'nullable',
+            'postaladdress' => 'required|max:100',
             'abstract' => 'required|max:1000',
 			'summary' => 'required|max:1000',
             'biostatement' => 'required|max:1000',
@@ -92,10 +92,16 @@ class ProposalController extends Controller
      */
     public function update(Request $request, Proposal $proposal)
     {
-        $request()->validate([
-            'firstname' => 'required|max:20',
-			'lastname' => 'required|max:20',
-            'papertitle' => 'required',
+        $request->validate([
+            'papertitle' => 'required|max:255',
+            'email' => 'email|required|max:30',
+			'phonenumber' => 'required|min:8|numeric',
+            'position' => 'nullable',
+            'institution' => 'required',
+            'postaladdress' => 'required|max:100',
+            'abstract' => 'required|max:1000',
+			'summary' => 'required|max:1000',
+            'biostatement' => 'required|max:1000',
         ]);
         $proposal->update($request->all());
 		

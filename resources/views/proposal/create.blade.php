@@ -79,7 +79,8 @@
 					<input type="text" name="email" class="form-control" value="{{ old('email') }}">
                     <span class="text-danger">{{ $errors->first('email') }}</span>
 				</div>
-                </div>	
+                </div>
+				
 				<div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group {{ $errors->has('phonenumber') ? 'has-error' : '' }}">  
 					<strong>Contact Phone Number (Local):</strong>
@@ -160,23 +161,25 @@
                     <span class="text-danger">{{ $errors->first('papertype') }}</span>
 				  </div>
               </div>
+			  
 			  <div class="col-xs-12 col-sm-12 col-md-12" >   
                 <div class="form-group {{ $errors->has('abstract') ? 'has-error' : '' }}">  			  
 						<strong>Proposal / Abstract:</strong>
 						<textarea name="abstract" class="form-control" rows="5" 
                             placeholder="required, describe your proposal or abstract..">{{ old('abstract') }}</textarea>
-						
-                    <span class="text-danger">{{ $errors->first('abstract') }}</span>
+						<span class="text-danger">{{ $errors->first('abstract') }}</span>
 				  </div>
-              </div>			  
+              </div>
+			  
  			  <div class="col-xs-12 col-sm-12 col-md-12" >   
                 <div class="form-group {{ $errors->has('summary') ? 'has-error' : '' }}">  			  
 						<strong>Summary:</strong>
 						<textarea name="summary" class="form-control" rows="5" 
-                            placeholder="required, write your proposal summary..">{{ old('summary') }}</textarea>						
+                            placeholder="required, write your proposal summary..">{{ old('summary') }}</textarea>	
                     <span class="text-danger">{{ $errors->first('summary') }}</span>
 				</div>
-              </div>	           
+              </div>
+			  
 			  <div class="col-xs-12 col-sm-12 col-md-12" >   
                 <div class="form-group {{ $errors->has('biostatement') ? 'has-error' : '' }}">  			  
 						<strong>Author's Biostatement:</strong>
