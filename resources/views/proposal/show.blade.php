@@ -13,55 +13,69 @@
         </div>
     </div>
 
+	<div class="container">
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Salutation:</strong>
-                {{ $proposal->salutation }}
-            </div>
-        </div>	
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Name:</strong>
-                {{ $proposal->lastname }}, {{ $proposal->firstname }}
-				<br>			
-                <strong>Email Address:</strong>
-                {{ $proposal->email }}		
-				<br>			
-                <strong>Contact Phone Number:</strong>
-                {{ $proposal->phonenumber }}		
-				<br>			
-                <strong>Position:</strong>
-                {{ $proposal->position }}						
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Institution:</strong>
-                {{ $proposal->institution }} 
-				<br>			
-                <strong>Postal Address:</strong>
-                {{ $proposal->postageaddress }}						
-				<br>			
-                <strong>Paper Title:</strong>
-                {{ $proposal->papertitle }}
-				<br>			
-                <strong>Paper Type:</strong>
-                {{ $proposal->papertype }}				
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Proposal Summary:</strong>
-                {{ $proposal->summary }}
-            </div>
-        </div>		
-       <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Author's Biostatement:</strong>
-                {{ $proposal->biostatement }}
-            </div>
-        </div>				
-    </div>
+	  <h6>Proposal Record ID: {{ $proposal->id }}</h6>
+	  <table class="table table-bordered">
+		<thead><tr>
+					<th>Field</th>
+					<th>Content</th>
+		</tr></thead>
+
+		<tbody>
+			 <tr>
+					<td><strong>Salutation</strong></td>
+					<td>{{ Config::get('constants.salutations.' . $proposal->salutation)  }}</td>
+			 </tr>		
+			 <tr>
+					<td><strong>Name</strong></td>
+					<td>{{ $proposal->lastname }}, {{ $proposal->firstname }}
+					    {{ $proposal->middlename }}</td>
+			 </tr>
+			 <tr>
+					<td><strong>Email</strong></td>
+					<td>{{ $proposal->email }}</td>
+			 </tr>
+			 <tr>
+					<td><strong>Contact Phone No.</strong></td>
+					<td>{{ $proposal->phonenumber }}</td>
+			 </tr>
+			 <tr>
+					<td><strong>Position</strong></td>
+					<td>{{ $proposal->position }}</td>
+			 </tr>
+			 <tr>
+					<td><strong>Institution</strong></td>
+					<td>{{ Config::get('constants.institutions.' . $proposal->institution) }}</td>
+			 </tr>
+			 <tr>
+					<td><strong>Postal Address</strong></td>
+					<td>{{ $proposal->postaladdress }}</td>
+			 </tr>
+			 <tr>
+					<td><strong>Paper Title</strong></td>
+					<td>{{ $proposal->papertitle }}</td>
+			 </tr>
+			 <tr>
+					<td><strong>Abstract</strong></td>
+					<td>{{ $proposal->abstract }}</td>
+			 </tr>			 
+			 <tr>
+					<td><strong>Proposal Summary</strong></td>
+					<td>{{ $proposal->summary }}</td>
+			 </tr>
+			 <tr>
+					<td><strong>Author's Biostatement</strong></td>
+					<td>{{ $proposal->biostatement }}</td>
+			 </tr>	
+			 <tr>
+					<td><strong>Created Date</strong></td>
+					<td>{{ $proposal->created_at }}</td>
+			 </tr>			 
+		</tbody>
+	  </table>
+
+	</div>
+
+
 @endsection

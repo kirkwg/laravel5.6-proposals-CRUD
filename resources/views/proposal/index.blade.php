@@ -33,7 +33,7 @@
         <tr>
             <td>{{ ++$i }}</td>
             <td style=”table-layout:fixed”>{{ $proposal->lastname }}, {{ $proposal->firstname }}</td>
-            <td>{{ $proposal->papertitle }}</td>      <!-- Config::get('constants.institutions.6')-->
+            <td>{{ mb_substr($proposal->papertitle, 0, 80) . ".." }}</td>      <!-- Config::get('constants.institutions.6')-->
 			<td> {{ Config::get('constants.institutions.' . $proposal->institution) }}  </td>
 			<td>{{ $proposal->created_at }}</td>
             <td>
