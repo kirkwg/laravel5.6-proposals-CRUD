@@ -1,0 +1,16 @@
+body {
+ font-size: 14px;
+ font-family: 'PT Sans Narrow', sans-serif!important;
+ background-color: ivoy;   /*lightslategray or lightgray;*/
+ 
+
+}
+h3 {color: skyblue; }
+
+tr {
+    border: 3px solid white;
+    background-color: #d8d8d8;  /* light dark gray */
+}
+tr:nth-child(even) {
+    background-color: lightblue; /* #f2f2f2  /* light gray */
+}

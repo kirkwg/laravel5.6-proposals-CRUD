@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h3 style="color:skyblue"><strong>Edit Proposal</strong></h3>
+                <h3><strong>Edit Proposal</strong></h3>
 				<hr>
             </div>
             <div class="pull-right">
@@ -28,13 +28,14 @@
 	
 <div class="container">	
     <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">		
-	   <h7 class="text-danger">[Note: Only editable fields shown here..]</h7>
-	</div>
-	<div class="col-xs-12 col-sm-12 col-md-12">						
+      <div class="col-xs-12 col-sm-12 col-md-12">		
+	    <h7 class="text-danger">[Note: Author name is read-only, not editable..]</h7>
+	  </div>
+	  <div class="col-xs-12 col-sm-12 col-md-12">						
 		<strong>Name:</strong>
-		<input type="text" name="lastname" value="{{ $proposal->lastname }}, {{ $proposal->firstname }}" readonly>					
-	</div>	
+		 {{ $proposal->lastname }}, {{ $proposal->firstname }} {{ $proposal->middlename }}
+		<!--input type="text" name="lastname" value="{{ $proposal->lastname }}, {{ $proposal->firstname }}" readonly-->					
+	  </div>	
     </div><br>
 	
     <form action="{{ route('proposal.update',$proposal->id) }}" method="POST">

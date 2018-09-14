@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h3 style="color:skyblue"><strong>Show Proposal</strong></h3>
+                <h3><strong>Show Proposal</strong></h3>
 				<hr>
             </div>
             <div class="pull-right">
@@ -71,6 +71,10 @@
 			 <tr>
 					<td><strong>Created Date</strong></td>
 					<td>{{ $proposal->created_at }}</td>
+			 </tr>
+			 <tr>
+					<td><strong>Updated Date</strong></td>
+					<td>{{ $proposal->updated_at }}</td>
 			 </tr>			 
 		</tbody>
 	  </table>

@@ -1,0 +1,16 @@
+body {
+ font-size: 14px;
+ font-family: 'PT Sans Narrow', sans-serif!important;
+ background-color: snow;
+
+}
+h3 {color: skyblue; }
+
+tr {
+    border: 3px solid aliceblue;
+    background-color: #ffffff  /* white */
+}
+tr:nth-child(even) {
+    background-color: #F0FFFF  /* azure #F0FFFF */
+}
+

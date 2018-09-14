@@ -1,0 +1,24 @@
+body {
+ font-size: 14px;
+ font-family: 'PT Sans Narrow', sans-serif!important;
+ background-color: #eee;		/* gray 808080 */
+ 
+
+}
+
+
+tr {
+    border: 3px solid silver;
+    background-color: #d8d8d8  /* lighter dark gray */
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2  /* light gray*/
+}
+hr {
+	height: 0;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	
+}
+

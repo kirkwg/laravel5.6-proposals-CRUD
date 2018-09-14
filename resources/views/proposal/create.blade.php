@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h3 style="color:skyblue"><strong>Add New Proposal</strong></h3>
+                <h3><strong>Add New Proposal</strong></h3>
 				<hr>
             </div>
             <div class="pull-right">
